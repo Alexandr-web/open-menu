@@ -15,11 +15,11 @@ const openAndCloseMenu = () => {
   window.addEventListener('mousemove', e => moveOnTheScreen(e.clientX));
   window.addEventListener('touchmove', e => moveOnTheScreen(e.touches[0].clientX));
 
-  // Touch start
+  // Touch end
   window.addEventListener('mouseup', disconnectFromTheScreen);
   window.addEventListener('touchend', disconnectFromTheScreen);
   
-  // Touch end
+  // Touch start
   window.addEventListener('mousedown', e => connectToTheScreen(e.clientX));
   window.addEventListener('touchstart', e => connectToTheScreen(e.touches[0].clientX));
 
